@@ -4,20 +4,13 @@
 #
 Name     : R-magick
 Version  : 1.9
-Release  : 1
+Release  : 2
 URL      : https://cran.r-project.org/src/contrib/magick_1.9.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/magick_1.9.tar.gz
 Summary  : Advanced Graphics and Image-Processing in R
 Group    : Development/Tools
 License  : MIT
 Requires: R-magick-lib
-Requires: R-Rcpp
-Requires: R-curl
-Requires: R-evaluate
-Requires: R-ggplot2
-Requires: R-pdftools
-Requires: R-rsvg
-Requires: R-stringi
 BuildRequires : ImageMagick-dev
 BuildRequires : R-Rcpp
 BuildRequires : R-curl
@@ -54,11 +47,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536418681
+export SOURCE_DATE_EPOCH=1536423014
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1536418681
+export SOURCE_DATE_EPOCH=1536423014
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
