@@ -4,24 +4,23 @@
 #
 Name     : R-magick
 Version  : 2.0
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/magick_2.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/magick_2.0.tar.gz
 Summary  : Advanced Graphics and Image-Processing in R
 Group    : Development/Tools
 License  : MIT
-Requires: R-magick-lib
-Requires: R-Rcpp
-Requires: R-curl
-Requires: R-ggplot2
-Requires: R-pdftools
-Requires: R-rsvg
+Requires: R-magick-lib = %{version}-%{release}
+Requires: R-spelling
 BuildRequires : ImageMagick-dev
 BuildRequires : R-Rcpp
 BuildRequires : R-curl
+BuildRequires : R-evaluate
 BuildRequires : R-ggplot2
 BuildRequires : R-pdftools
 BuildRequires : R-rsvg
+BuildRequires : R-spelling
+BuildRequires : R-stringi
 BuildRequires : buildreq-R
 
 %description
@@ -50,11 +49,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538747677
+export SOURCE_DATE_EPOCH=1552861003
 
 %install
+export SOURCE_DATE_EPOCH=1552861003
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1538747677
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -89,8 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library magick|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  magick || :
 
 
 %files
@@ -128,10 +126,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/magick/images/objects.gif
 /usr/lib64/R/library/magick/images/shape_rectangle.gif
 /usr/lib64/R/library/magick/images/test_mag.gif
-/usr/lib64/R/library/magick/libs/symbols.rds
+/usr/lib64/R/library/magick/tests/spelling.R
 
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/magick/libs/magick.so
-/usr/lib64/R/library/magick/libs/magick.so.avx2
-/usr/lib64/R/library/magick/libs/magick.so.avx512
