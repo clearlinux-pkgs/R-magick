@@ -4,7 +4,7 @@
 #
 Name     : R-magick
 Version  : 2.2
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/magick_2.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/magick_2.2.tar.gz
 Summary  : Advanced Graphics and Image-Processing in R
@@ -13,20 +13,19 @@ License  : MIT
 Requires: R-magick-lib = %{version}-%{release}
 Requires: R-Rcpp
 Requires: R-curl
-Requires: R-ggplot2
 Requires: R-magrittr
-Requires: R-pdftools
-Requires: R-rsvg
-Requires: R-spelling
 BuildRequires : ImageMagick-dev
 BuildRequires : R-Rcpp
 BuildRequires : R-curl
+BuildRequires : R-evaluate
 BuildRequires : R-ggplot2
 BuildRequires : R-magrittr
 BuildRequires : R-pdftools
 BuildRequires : R-rsvg
 BuildRequires : R-spelling
+BuildRequires : R-stringi
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 processing library available. Supports many common formats (png, jpeg, tiff,
@@ -54,10 +53,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1566838936
+export SOURCE_DATE_EPOCH=1571859214
 
 %install
-export SOURCE_DATE_EPOCH=1566838936
+export SOURCE_DATE_EPOCH=1571859214
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
