@@ -1,3 +1,9 @@
 # This file contains build requirements that get picked up but are
 # undesirable. One entry per line, no whitespace.
+R-av
+R-ggplot2
+R-gifski
+R-pdftools
+R-rsvg
+R-tesseract
 R-tesseract

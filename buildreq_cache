@@ -1,10 +1,2 @@
-2.2
-R-Rcpp
-R-curl
-R-evaluate
-R-ggplot2
-R-pdftools
-R-rsvg
+2.3
 R-spelling
-R-stringi
-util-linux
