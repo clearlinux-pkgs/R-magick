@@ -4,7 +4,7 @@
 #
 Name     : R-magick
 Version  : 2.3
-Release  : 20
+Release  : 21
 URL      : https://cran.r-project.org/src/contrib/magick_2.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/magick_2.3.tar.gz
 Summary  : Advanced Graphics and Image-Processing in R
