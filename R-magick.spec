@@ -4,7 +4,7 @@
 #
 Name     : R-magick
 Version  : 2.3
-Release  : 21
+Release  : 22
 URL      : https://cran.r-project.org/src/contrib/magick_2.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/magick_2.3.tar.gz
 Summary  : Advanced Graphics and Image-Processing in R
@@ -42,21 +42,22 @@ lib components for the R-magick package.
 
 %prep
 %setup -q -c -n magick
+cd %{_builddir}/magick
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1580152705
+export SOURCE_DATE_EPOCH=1589758211
 
 %install
-export SOURCE_DATE_EPOCH=1580152705
+export SOURCE_DATE_EPOCH=1589758211
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
