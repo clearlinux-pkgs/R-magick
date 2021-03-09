@@ -1,6 +1,6 @@
-libMagick++-7.Q16HDRI.so.4
-libMagickCore-7.Q16HDRI.so.8
-libMagickWand-7.Q16HDRI.so.8
+libMagick++-7.Q16HDRI.so.5
+libMagickCore-7.Q16HDRI.so.9
+libMagickWand-7.Q16HDRI.so.9
 libR.so
 libc.so.6
 libgcc_s.so.1
