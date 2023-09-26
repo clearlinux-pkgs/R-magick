@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-magick
-Version  : 2.7.5
-Release  : 58
-URL      : https://cran.r-project.org/src/contrib/magick_2.7.5.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/magick_2.7.5.tar.gz
+Version  : 2.8.0
+Release  : 59
+URL      : https://cran.r-project.org/src/contrib/magick_2.8.0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/magick_2.8.0.tar.gz
 Summary  : Advanced Graphics and Image-Processing in R
 Group    : Development/Tools
 License  : MIT
@@ -54,10 +54,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1691431087
+export SOURCE_DATE_EPOCH=1695745777
 
 %install
-export SOURCE_DATE_EPOCH=1691431087
+export SOURCE_DATE_EPOCH=1695745777
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
