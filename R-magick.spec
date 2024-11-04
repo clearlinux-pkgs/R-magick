@@ -7,7 +7,7 @@
 #
 Name     : R-magick
 Version  : 2.8.5
-Release  : 66
+Release  : 67
 URL      : https://cran.r-project.org/src/contrib/magick_2.8.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/magick_2.8.5.tar.gz
 Summary  : Advanced Graphics and Image-Processing in R
