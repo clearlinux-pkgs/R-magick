@@ -7,7 +7,7 @@
 #
 Name     : R-magick
 Version  : 2.8.6
-Release  : 73
+Release  : 74
 URL      : https://ftp.osuosl.org/pub/cran/src/contrib/magick_2.8.6.tar.gz
 Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/magick_2.8.6.tar.gz
 Summary  : Advanced Graphics and Image-Processing in R
